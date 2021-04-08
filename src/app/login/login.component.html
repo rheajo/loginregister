@@ -1,0 +1,55 @@
+<div class="bg-img">
+
+    <div class="container">
+        
+    
+        <div class="register">
+            
+            <div class="reg">
+                Login Here For Better Experience!
+            </div>
+        
+                <div class="details">
+                
+                 <form [formGroup]="loginForm" (ngSubmit)="onLogin()" novalidate>
+                    
+                    <label for="emailId">EmailId</label>
+                    <input type="email" name="emailId" id="emailId" formControlName="emailId" placeholder="Enter emailId">
+                    <div class="validcheck" *ngIf="!emailId?.valid && (emailId?.dirty || emailId?.touched)">
+                        <div  class="em"   [hidden]="!emailId.errors.required">
+                            emailid is required
+                        </div>
+                        <div  class="em1" [hidden]="!email.errors.email">
+                            invalid email id
+                        </div>
+                         </div>
+        
+                       <label for="password">Password</label>
+                    <input type="password" name="password" id="password" formControlName="password"
+                        placeholder="Enter password">
+                    <div class="validcheck" *ngIf="!password?.valid && (password?.dirty || password?.touched)">
+                        <div  class="pa" [hidden]="!password.errors.required">
+                            password is required
+                        </div>
+                        <div  class="pa1"  [hidden]="!password.errors.minlength">
+                            password not strong
+                        </div>
+                    </div>
+        
+                     <button class="loginbtn" type="submit" [disabled] ="!loginForm.valid" >Login</button>
+                    <div class="rem">
+                        <input type="checkbox" id="remember"> Remember me
+                    </div>
+        
+                    <div class="cancelcontainer">
+                        <button class="cancelbtn" type="button" [routerLink] = "['/Register']">Cancel</button>
+                        <div class="forgotpass">
+                            Forgot <a href="#">password?</a>
+                        </div>
+                    </div>
+                </form>
+           </div>
+        </div>
+     </div>
+        
+    </div>

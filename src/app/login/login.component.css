@@ -1,0 +1,157 @@
+.register .reg
+{
+    text-align: center;
+    background-color: white;
+    margin-top: 20px;
+    padding: 30px;
+    font-size: 30px;
+    
+    font-weight: bold;
+
+}
+.register
+{
+background-color: white;
+
+}
+
+.details
+{
+    background-color: white;
+    width: 300px;
+    margin: 0px auto 0px; 
+    padding: 10px;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.details input[type=text],
+.details input[type=password] {
+    font-size: 15px;
+    
+    font-weight: lighter;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+.loginbtn
+{
+    margin: 10px auto 10px;
+    
+    width: 280px;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #fce181;
+
+}
+button:hover {
+    background-color:#f5cb35;
+}
+.details .rem
+{
+    font-weight: lighter;
+    font-size: 20px;   
+}
+
+.cancelcontainer
+{
+    width: 280px;
+    margin: 10px auto 50px; 
+    padding: 10px;
+    background-color: rgb(240, 236, 236);
+}
+.cancelcontainer .cancelbtn
+{
+    border: none;
+  color:black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: #fce181;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.cancelcontainer .forgotpass
+{
+    font-weight: lighter;
+    font-size: 15px;   
+    margin-top: 30px;
+    float: right;
+    
+}
+.em , .em1 , .pa , pa1 {
+    font-size: small;
+    color: red;
+    
+}
+.forgotpass a:link
+{
+    text-decoration: underline;
+}
+
+.validcheck
+{
+    font-size: normal;
+    font-weight: lighter;
+    /* background-color: rgb(221, 66, 66); */
+    border-radius: 10px;
+}
+ 
+.details input[type=password],
+.details input[type=email] {
+    font-size: 15px;
+    
+    font-weight: lighter;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+
+input:focus{
+    border:3px solid #EDEAE5;
+    outline: none;
+    box-shadow: none;
+}
+button{
+    background-color: #FEF9C7;
+    
+}
+button:focus{
+    background-color: #FCE181;
+    outline: none; 
+    box-shadow: none;
+}
+
+.container{
+    
+    padding: 20px;
+    width: fit-content;
+    height: initial;
+
+}
+
+.bg-img {
+    
+    
+    min-height: 380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }

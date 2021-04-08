@@ -1,0 +1,86 @@
+<div class="bg-img"><div class="container">
+    <div class="register">
+       
+        <div class="reg">
+            Register Here For The Better Experience!
+        </div>
+          
+        
+        <div class="details">
+           
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+                <label for="FirstName">First Name</label>
+                <input type="text" name="FirstName" id="FirstName" formControlName="FirstName" placeholder="Enter First Name">
+                <div class="validcheck" *ngIf="!FirstName?.valid && (FirstName?.dirty || FirstName?.touched)">
+                    <div class="fn" [hidden]="!FirstName.errors.required">
+                        First name is required
+                    </div>
+                    </div>
+    
+                <label for="LastName">Last Name</label>
+                <input type="text" name="LastName" id="LastName" formControlName="LastName" placeholder="Enter Last Name">
+                <div class="validcheck" *ngIf="!LastName?.valid && (LastName?.dirty || LastName?.touched)">
+                    <div  class="ln" [hidden]=" !LastName.errors.required">
+                        last name is required
+                    </div>
+                    </div>
+    
+                    <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" formControlName="email" placeholder="Enter email">
+                <div class="validcheck" *ngIf="!email.valid && (email.dirty ||email.touched)">
+                    <div  class="em" [hidden]="!email.errors.required">
+                        email is required
+                    </div>
+                    <div  class="em1" [hidden]="!email.errors.email">
+                        invalid email id
+                    </div>
+                     </div>
+                    
+                         <label for="password">Password</label>
+                <input type="password" name="password" id="password" formControlName="password"
+                    placeholder="Enter password">
+                <div class="validcheck" *ngIf="!password?.valid && (password?.dirty || password?.touched)">
+                    <div class="pa1" [hidden]="!password.errors.required">
+                        password is required
+                    </div>
+                    <div  class="pa2" [hidden]="!password.errors.password">
+                        password is not strong
+                    </div>
+                     </div>
+    
+                     <label for="Contact">Contact No.</label>
+                <input type="tel" name="Contact" id="phone_number" pattern="[6789]/d{9}$"  formControlName="Contact" placeholder="Enter Contact Number">
+                <div class="validcheck" *ngIf="!Contact?.valid && (Contact?.dirty || Contact?.touched)">
+                    <div  class="con" [hidden]="!Contact.errors.required">
+                      Contact is required
+                   </div>
+                   <div  class="con1" [hidden]="!Contact.errors.Contact">
+                    invalid Contact
+                </div>
+                </div>
+    
+                <label for ="Gender">Gender</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                       <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                          <label for="female">Female</label><br>
+                           <input type="radio" id="other" name="gender" value="other">
+                               <label for="other">Other</label><br>
+            
+                
+               <label for="DOB">Date of Birth</label><br>
+                <input type="date" name="DOB" id="DOB" formControlName="DOB" placeholder="Enter DOB">
+                <div class="validcheck" *ngIf="!DOB?.valid && (DOB?.dirty || DOB?.touched)">
+                    <div  class="dob" [hidden]="!DOB.errors.required">
+                       DOB is required
+                    </div>
+                </div><br>
+              
+                
+                <button class="registerbtn" type="submit" [disabled] ="!registerForm.valid" >Register</button>
+            </form>
+    
+        </div>
+    </div>
+    </div>
+</div>
